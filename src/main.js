@@ -1,8 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
+import store from './store'
 
-Vue.config.productionTip = false
+
+import {Input} from '../node_modules/element-ui';
+
+Vue.use(Input);
+
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
+  router,
+  store,
+  render: h => h(App)
 }).$mount('#app')
